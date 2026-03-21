@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from odoo import api, fields, models
-
+from odoo.exceptions import UserError
 
 class PmlBom(models.Model):
     _name = 'pml.bom'
@@ -12,9 +12,8 @@ class PmlBom(models.Model):
         required=True,
         copy=False,
         default='New',
-        size=8,
         tracking=True,
-        help='Reference allows no more than 8 characters.',
+        help='Auto-generated reference.',
     )
     product_id = fields.Many2one(
         'pml.product',
@@ -69,10 +68,16 @@ class PmlBom(models.Model):
         compute='_compute_eco_count',
     )
 
+    @api.model_create_multi
+    def create(self, vals_list):
+        for vals in vals_list:
+            if not vals.get('name') or vals['name'] == 'New':
+                vals['name'] = self.env['ir.sequence'].next_by_code('pml.bom') or 'New'
+        return super().create(vals_list)
+
     def write(self, vals):
         for rec in self:
             if rec.status == 'archived' and 'status' not in vals:
-                from odoo.exceptions import UserError
                 raise UserError(
                     'Bill of Materials "%s" is archived and cannot be modified.' % rec.name
                 )

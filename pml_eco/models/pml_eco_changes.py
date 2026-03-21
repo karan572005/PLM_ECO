@@ -107,9 +107,19 @@ class PmlEcoChangesBomLine(models.Model):
         ('removed', 'Removed'),
         ('modified', 'Modified'),
         ('unchanged', 'Unchanged'),
-    ], string='Change', default='unchanged', required=True)
+    ], string='Change', compute='_compute_change_type', store=True, readonly=False)
 
-    # Colour helper for list view decoration
+    @api.depends('old_qty', 'new_qty')
+    def _compute_change_type(self):
+        for rec in self:
+            if rec.old_qty == 0 and rec.new_qty > 0:
+                rec.change_type = 'added'
+            elif rec.old_qty > 0 and rec.new_qty == 0:
+                rec.change_type = 'removed'
+            elif rec.old_qty != rec.new_qty:
+                rec.change_type = 'modified'
+            else:
+                rec.change_type = 'unchanged'    # Colour helper for list view decoration
     color = fields.Char(compute='_compute_color')
 
     @api.depends('change_type')
@@ -142,7 +152,19 @@ class PmlEcoChangesOperationLine(models.Model):
         ('removed', 'Removed'),
         ('modified', 'Modified'),
         ('unchanged', 'Unchanged'),
-    ], string='Change', default='unchanged', required=True)
+    ], string='Change', compute='_compute_change_type', store=True, readonly=False)
+
+    @api.depends('old_duration', 'new_duration')
+    def _compute_change_type(self):
+        for rec in self:
+            if rec.old_duration == 0 and rec.new_duration > 0:
+                rec.change_type = 'added'
+            elif rec.old_duration > 0 and rec.new_duration == 0:
+                rec.change_type = 'removed'
+            elif rec.old_duration != rec.new_duration:
+                rec.change_type = 'modified'
+            else:
+                rec.change_type = 'unchanged'
 
 
 class PmlEcoChangesProductLine(models.Model):
@@ -163,4 +185,16 @@ class PmlEcoChangesProductLine(models.Model):
         ('removed', 'Removed'),
         ('modified', 'Modified'),
         ('unchanged', 'Unchanged'),
-    ], string='Change', default='unchanged', required=True)
+    ], string='Change', compute='_compute_change_type', store=True, readonly=False)
+
+    @api.depends('old_value', 'new_value')
+    def _compute_change_type(self):
+        for rec in self:
+            if not rec.old_value and rec.new_value:
+                rec.change_type = 'added'
+            elif rec.old_value and not rec.new_value:
+                rec.change_type = 'removed'
+            elif rec.old_value != rec.new_value:
+                rec.change_type = 'modified'
+            else:
+                rec.change_type = 'unchanged'

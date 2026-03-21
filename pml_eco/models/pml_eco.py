@@ -303,30 +303,50 @@ class PmlEco(models.Model):
             old_bom = self.bill_of_material_id
 
             if self.version_update:
-                # CREATE new BoM as copy of old
-                new_bom = old_bom.copy({
+                # Capture changes BEFORE any write to self
+                changes = self.changes_id[0] if self.changes_id else None
+
+                # CREATE new BoM manually — reliable component/operation copy
+                new_bom = self.env['pml.bom'].create({
+                     'name': self.env['ir.sequence'].next_by_code('pml.bom') or old_bom.name,
+                    'product_id': old_bom.product_id.id,
+                    'quantity': old_bom.quantity,
+                    'uom_id': old_bom.uom_id.id,
                     'version': old_bom.version + 1,
                     'status': 'active',
                 })
-                # ARCHIVE old BoM
+
+                # Manually copy ALL components
+                for comp in old_bom.component_ids:
+                    self.env['pml.bom.component'].create({
+                        'bom_id': new_bom.id,
+                        'product_id': comp.product_id.id,
+                        'quantity': comp.quantity,
+                        'uom_id': comp.uom_id.id,
+                        'to_consume': comp.to_consume,
+                    })
+
+                # Manually copy ALL operations
+                for op in old_bom.operation_ids:
+                    self.env['pml.bom.operation'].create({
+                        'bom_id': new_bom.id,
+                        'name': op.name,
+                        'work_center': op.work_center,
+                        'duration': op.duration,
+                    })
+
+                # ARCHIVE old BoM and point ECO to new
                 old_bom.write({'status': 'archived'})
-                # Point ECO to new BoM
                 self.write({'bill_of_material_id': new_bom.id})
 
-                if self.changes_id:
-                    changes = self.changes_id[0]
-
+                if changes:
                     for change_line in changes.bom_component_change_ids:
-                        # Find matching component in new BoM
                         matching = new_bom.component_ids.filtered(
-                            lambda c: c.product_id.id == change_line.product_id.id
+                            lambda c, cl=change_line: c.product_id.id == cl.product_id.id
                         )
                         if change_line.change_type == 'removed':
-                            # Delete component from new BoM
                             matching.unlink()
-
                         elif change_line.change_type == 'added':
-                            # Add new component to new BoM
                             if not matching:
                                 self.env['pml.bom.component'].create({
                                     'bom_id': new_bom.id,
@@ -334,20 +354,16 @@ class PmlEco(models.Model):
                                     'quantity': change_line.new_qty,
                                     'uom_id': change_line.uom_id.id,
                                 })
-
                         elif change_line.change_type == 'modified':
-                            # Update quantity in new BoM
                             if matching:
                                 matching.write({'quantity': change_line.new_qty})
 
                     for op_line in changes.bom_operation_change_ids:
-                        # Find matching operation in new BoM
                         matching_op = new_bom.operation_ids.filtered(
-                            lambda o: o.name == op_line.operation_name
+                            lambda o, ol=op_line: o.name == ol.operation_name
                         )
                         if op_line.change_type == 'removed':
                             matching_op.unlink()
-
                         elif op_line.change_type == 'added':
                             if not matching_op:
                                 self.env['pml.bom.operation'].create({
@@ -355,42 +371,38 @@ class PmlEco(models.Model):
                                     'name': op_line.operation_name,
                                     'duration': op_line.new_duration,
                                 })
-
                         elif op_line.change_type == 'modified':
                             if matching_op:
                                 matching_op.write({'duration': op_line.new_duration})
             else:
-                # No version update — just keep same BoM active
                 old_bom.write({'status': 'active'})
 
         elif self.eco_type == 'product' and self.pml_product_id:
             old_product = self.pml_product_id
 
             if self.version_update:
-                # CREATE new Product as copy of old
-                new_product = old_product.copy({
+                changes = self.changes_id[0] if self.changes_id else None
+
+                new_product = self.env['pml.product'].create({
+                    'name': old_product.name,
+                    'sales_price': old_product.sales_price,
+                    'cost_price': old_product.cost_price,
+                    'currency_id': old_product.currency_id.id,
                     'version': old_product.version + 1,
                     'status': 'active',
                 })
-                # ARCHIVE old Product
+
                 old_product.write({'status': 'archived'})
-                # Point ECO to new Product
                 self.write({'pml_product_id': new_product.id})
 
-                if self.changes_id:
-                    changes = self.changes_id[0]
+                if changes:
                     update_vals = {}
-
                     for change_line in changes.product_change_ids:
                         if change_line.change_type == 'modified':
                             if change_line.field_label == 'Sales Price':
-                                update_vals['sales_price'] = float(
-                                    change_line.new_value or 0
-                                )
+                                update_vals['sales_price'] = float(change_line.new_value or 0)
                             elif change_line.field_label == 'Cost Price':
-                                update_vals['cost_price'] = float(
-                                    change_line.new_value or 0
-                                )
+                                update_vals['cost_price'] = float(change_line.new_value or 0)
                     if update_vals:
                         new_product.write(update_vals)
             else:
@@ -401,9 +413,7 @@ class PmlEco(models.Model):
             'effective_date': now,
             'eco_applied': True,
         })
-        self.message_post(
-            body='ECO Applied. Effective Date: %s' % now
-        )
+        self.message_post(body='ECO Applied. Effective Date: %s' % now)
 
     def approve_eco(self):
         """Legacy method - kept for backward compatibility."""

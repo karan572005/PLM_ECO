@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="seq_pml_bom" model="ir.sequence">
+        <field name="name">PML Bill of Materials</field>
+        <field name="code">pml.bom</field>
+        <field name="prefix">BOM/</field>
+        <field name="padding">5</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+        <field name="company_id" eval="False"/>
+    </record>
+</odoo>

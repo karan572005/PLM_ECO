@@ -9,6 +9,7 @@
     'data': [
         'security/pml_security.xml',
         'security/ir.model.access.csv',
+        'data/pml_sequence_data.xml',
         'data/pml_eco_stage_data.xml',
         'views/pml_product_views.xml',
         'views/pml_bom_views.xml',
