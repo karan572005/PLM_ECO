@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Changes Form View (opened in dialog) -->
+    <record id="view_pml_eco_changes_form" model="ir.ui.view">
+        <field name="name">pml.eco.changes.form</field>
+        <field name="model">pml.eco.changes</field>
+        <field name="arch" type="xml">
+            <form string="ECO Changes">
+                <sheet>
+                    <div class="oe_title">
+                        <h2>
+                            <field name="eco_id" readonly="1"/>
+                            — ECO Changes
+                        </h2>
+                    </div>
+
+                    <!-- BoM changes -->
+                    <group invisible="eco_type != 'bill_of_material'">
+                        <notebook>
+                            <page string="Components" name="bom_components">
+                                <div class="alert alert-info" role="alert">
+                                    <strong>Red</strong> = Removed &#160;|&#160;
+                                    <strong>Green</strong> = Added &#160;|&#160;
+                                    <strong>Black</strong> = Unchanged
+                                </div>
+                                <field name="bom_component_change_ids">
+                                    <list editable="bottom">
+                                        <field name="product_id"/>
+                                        <field name="old_qty" string="Old Qty (Prev. Version)"/>
+                                        <field name="new_qty" string="New Qty"/>
+                                        <field name="uom_id"/>
+                                        <field name="change_type" widget="badge"
+                                               decoration-success="change_type == 'added'"
+                                               decoration-danger="change_type == 'removed'"
+                                               decoration-warning="change_type == 'modified'"
+                                               decoration-muted="change_type == 'unchanged'"/>
+                                    </list>
+                                </field>
+                            </page>
+                            <page string="Operations" name="bom_operations">
+                                <field name="bom_operation_change_ids">
+                                    <list editable="bottom">
+                                        <field name="operation_name"/>
+                                        <field name="old_duration" string="Old Duration (min)"/>
+                                        <field name="new_duration" string="New Duration (min)"/>
+                                        <field name="change_type" widget="badge"
+                                               decoration-success="change_type == 'added'"
+                                               decoration-danger="change_type == 'removed'"
+                                               decoration-warning="change_type == 'modified'"
+                                               decoration-muted="change_type == 'unchanged'"/>
+                                    </list>
+                                </field>
+                            </page>
+                        </notebook>
+                    </group>
+
+                    <!-- Product changes -->
+                    <group invisible="eco_type != 'product'">
+                        <div class="alert alert-info" role="alert">
+                            <strong>Red</strong> = Changed (old value) &#160;|&#160;
+                            <strong>Green</strong> = New value &#160;|&#160;
+                            <strong>Black</strong> = Unchanged
+                        </div>
+                        <field name="product_change_ids">
+                            <list editable="bottom">
+                                <field name="field_label"/>
+                                <field name="old_value" string="Version 1 (Old)"/>
+                                <field name="new_value" string="Version 2 (New)"/>
+                                <field name="change_type" widget="badge"
+                                       decoration-success="change_type == 'added'"
+                                       decoration-danger="change_type == 'removed'"
+                                       decoration-warning="change_type == 'modified'"
+                                       decoration-muted="change_type == 'unchanged'"/>
+                            </list>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

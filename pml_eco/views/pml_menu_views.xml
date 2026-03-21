@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ── Root Menu ─────────────────────────────────────────────────────── -->
+    <menuitem id="menu_pml_eco_root"
+              name="Engineering"
+              sequence="50"
+              web_icon="pml_eco,static/description/icon.png"/>
+
+    <!-- ── ECO's Menu ────────────────────────────────────────────────────── -->
+    <menuitem id="menu_pml_eco_ecos"
+              name="ECO's"
+              parent="menu_pml_eco_root"
+              sequence="10"/>
+
+    <menuitem id="menu_pml_eco_list"
+              name="Engineering Change Orders"
+              parent="menu_pml_eco_ecos"
+              action="action_pml_eco"
+              sequence="10"/>
+
+    <!-- ── Master Data Menu ──────────────────────────────────────────────── -->
+    <menuitem id="menu_pml_eco_master"
+              name="Master Data"
+              parent="menu_pml_eco_root"
+              sequence="20"/>
+
+    <menuitem id="menu_pml_eco_bom"
+              name="Bills of Materials"
+              parent="menu_pml_eco_master"
+              action="action_pml_bom"
+              sequence="10"/>
+
+    <menuitem id="menu_pml_eco_product"
+              name="Products"
+              parent="menu_pml_eco_master"
+              action="action_pml_product"
+              sequence="20"/>
+
+    <!-- ── Reporting Menu ────────────────────────────────────────────────── -->
+    <menuitem id="menu_pml_eco_reporting"
+              name="Reporting"
+              parent="menu_pml_eco_root"
+              sequence="30"/>
+
+    <menuitem id="menu_pml_eco_report_ecos"
+              name="Engineering Change Orders"
+              parent="menu_pml_eco_reporting"
+              action="action_pml_eco_reporting"
+              sequence="10"/>
+
+    <!-- ── Settings Menu ─────────────────────────────────────────────────── -->
+    <menuitem id="menu_pml_eco_settings"
+              name="Settings"
+              parent="menu_pml_eco_root"
+              sequence="40"/>
+
+    <menuitem id="menu_pml_eco_stages"
+              name="ECO Stages"
+              parent="menu_pml_eco_settings"
+              action="action_pml_eco_stage"
+              sequence="10"/>
+
+</odoo>

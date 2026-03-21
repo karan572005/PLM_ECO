@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Product Version History Action -->
+    <record id="action_pml_product_version_history" model="ir.actions.act_window">
+        <field name="name">Product Version History</field>
+        <field name="res_model">pml.product</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{'search_default_group_version': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">No product history found.</p>
+        </field>
+    </record>
+
+    <!-- BoM Change History Action -->
+    <record id="action_pml_bom_history" model="ir.actions.act_window">
+        <field name="name">BoM Change History</field>
+        <field name="res_model">pml.bom</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">No BoM history found.</p>
+        </field>
+    </record>
+
+    <!-- Archived Products Action -->
+    <record id="action_pml_archived_products" model="ir.actions.act_window">
+        <field name="name">Archived Products</field>
+        <field name="res_model">pml.product</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('status','=','archived')]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">No archived products found.</p>
+        </field>
+    </record>
+
+    <!-- Active Product-Version-BoM Matrix Action -->
+    <record id="action_pml_active_matrix" model="ir.actions.act_window">
+        <field name="name">Active Product–Version–BoM Matrix</field>
+        <field name="res_model">pml.bom</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('status','=','active')]</field>
+        <field name="context">{'search_default_group_product': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">No active BoMs found.</p>
+        </field>
+    </record>
+
+    <menuitem id="menu_pml_report_product_history"
+              name="Product Version History"
+              parent="menu_pml_eco_reporting"
+              action="action_pml_product_version_history"
+              sequence="20"/>
+
+    <menuitem id="menu_pml_report_bom_history"
+              name="BoM Change History"
+              parent="menu_pml_eco_reporting"
+              action="action_pml_bom_history"
+              sequence="30"/>
+
+    <menuitem id="menu_pml_report_archived"
+              name="Archived Products"
+              parent="menu_pml_eco_reporting"
+              action="action_pml_archived_products"
+              sequence="40"/>
+
+    <menuitem id="menu_pml_report_matrix"
+              name="Active Product–Version–BoM Matrix"
+              parent="menu_pml_eco_reporting"
+              action="action_pml_active_matrix"
+              sequence="50"/>
+
+</odoo>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Approval List View -->
+    <record id="view_pml_eco_approval_list" model="ir.ui.view">
+        <field name="name">pml.eco.approval.list</field>
+        <field name="model">pml.eco.approval</field>
+        <field name="arch" type="xml">
+            <list string="Approvals">
+                <field name="eco_id"/>
+                <field name="stage_id"/>
+                <field name="user_id"/>
+                <field name="approval_type"/>
+                <field name="status" widget="badge"
+                       decoration-success="status == 'approved'"
+                       decoration-danger="status == 'refused'"
+                       decoration-warning="status == 'pending'"/>
+                <field name="date_approved"/>
+                <button name="action_approve" string="Approve"
+                        type="object" class="btn-success"
+                        invisible="status != 'pending'"/>
+                <button name="action_refuse" string="Refuse"
+                        type="object" class="btn-danger"
+                        invisible="status != 'pending'"/>
+            </list>
+        </field>
+    </record>
+
+</odoo>

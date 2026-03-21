@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="group_plm_engineer" model="res.groups">
+        <field name="name">PLM / Engineering User</field>
+        <field name="category_id" ref="base.module_category_manufacturing"/>
+        <field name="comment">Can create and modify ECOs, propose changes, initiate approvals.</field>
+    </record>
+
+    <record id="group_plm_approver" model="res.groups">
+        <field name="name">PLM / Approver</field>
+        <field name="category_id" ref="base.module_category_manufacturing"/>
+        <field name="implied_ids" eval="[(4, ref('group_plm_engineer'))]"/>
+        <field name="comment">Can review and approve ECOs.</field>
+    </record>
+
+    <record id="group_plm_operations" model="res.groups">
+        <field name="name">PLM / Operations User</field>
+        <field name="category_id" ref="base.module_category_manufacturing"/>
+        <field name="comment">Can only view active Products and BoMs.</field>
+    </record>
+
+    <record id="group_plm_admin" model="res.groups">
+        <field name="name">PLM / Administrator</field>
+        <field name="category_id" ref="base.module_category_manufacturing"/>
+        <field name="implied_ids" eval="[(4, ref('group_plm_approver'))]"/>
+        <field name="comment">Full access. Configures stages, approvals, and master data.</field>
+    </record>
+
+</odoo>

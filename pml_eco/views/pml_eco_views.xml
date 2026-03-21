@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ── List View ─────────────────────────────────────────────────────── -->
+    <record id="view_pml_eco_list" model="ir.ui.view">
+        <field name="name">pml.eco.list</field>
+        <field name="model">pml.eco</field>
+        <field name="arch" type="xml">
+            <list string="Engineering Change Orders">
+                <field name="name"/>
+                <field name="eco_type"/>
+                <field name="pml_product_id"/>
+                <field name="user_id"/>
+                <field name="stage_id"/>
+                <field name="status" widget="badge"
+                       decoration-success="status in ('approved','done')"
+                       decoration-info="status == 'in_progress'"
+                       decoration-danger="status == 'canceled'"
+                       decoration-muted="status == 'draft'"/>
+                <field name="version_update" widget="boolean_toggle"/>
+                <field name="eco_applied" widget="boolean_toggle"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- ── Form View ─────────────────────────────────────────────────────── -->
+    <record id="view_pml_eco_form" model="ir.ui.view">
+        <field name="name">pml.eco.form</field>
+        <field name="model">pml.eco</field>
+        <field name="arch" type="xml">
+            <form string="Engineering Change Order">
+                <header>
+                    <!-- Status bar driven by stage -->
+                    <field name="stage_id" widget="statusbar"
+                           options="{'clickable': '1'}"/>
+
+                    <!-- Start button — visible only in draft -->
+                    <button name="action_start"
+                            string="Start"
+                            type="object"
+                            class="btn-primary"
+                            invisible="status != 'draft'"/>
+
+                    <!-- Approval button — visible in_progress when user has a pending approval -->
+                    <button name="action_approve"
+                            string="Approve"
+                            type="object"
+                            class="btn-success"
+                            invisible="status != 'in_progress' or pending_approval_count == 0"/>
+
+                    <!-- Validate button — when no approvals configured -->
+                    <button name="action_validate"
+                            string="Validate"
+                            type="object"
+                            class="btn-primary"
+                            invisible="status != 'in_progress' or approval_count != 0"/>
+
+                    <!-- Cancel -->
+                    <button name="action_cancel"
+                            string="Cancel"
+                            type="object"
+                            class="btn-secondary"
+                            invisible="status in ('done','canceled')"/>
+
+                    <!-- Reset to Draft -->
+                    <button name="action_reset_draft"
+                            string="Reset to Draft"
+                            type="object"
+                            class="btn-secondary"
+                            invisible="status not in ('canceled')"/>
+
+                    <field name="status" widget="statusbar"
+                           statusbar_visible="draft,in_progress,approved,done"
+                           invisible="1"/>
+                </header>
+
+                <sheet>
+                    <!-- Stat buttons -->
+                    <div class="oe_button_box" name="button_box">
+                        <!-- Open BoM button -->
+                        <button name="action_view_bill_of_materials"
+                                type="object"
+                                class="oe_stat_button"
+                                icon="fa-flask"
+                                string="Open BoM"
+                                invisible="eco_type != 'bill_of_material' or not bill_of_material_id"/>
+
+                        <!-- Open Product button -->
+                        <button name="action_view_product"
+                                type="object"
+                                class="oe_stat_button"
+                                icon="fa-cube"
+                                string="Open Product"
+                                invisible="eco_type != 'product' or not pml_product_id"/>
+
+                        <!-- Changes button -->
+                        <button name="action_view_changes"
+                                type="object"
+                                class="oe_stat_button"
+                                icon="fa-history"
+                                string="Changes"
+                                invisible="status == 'draft'"/>
+
+                        <!-- Approvals stat button -->
+                        <button name="action_view_approvals"
+                                type="object"
+                                class="oe_stat_button"
+                                icon="fa-check-circle"
+                                invisible="approval_count == 0">
+                            <field name="approval_count" widget="statinfo" string="Approvals"/>
+                        </button>
+                    </div>
+
+                    <!-- ECO Applied tag -->
+                    <div class="alert alert-success" role="alert"
+                         invisible="not eco_applied">
+                        <strong>ECO Applied</strong> — Changes have been applied to the linked record.
+                    </div>
+
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name"
+                                   placeholder="e.g. iPhone 17 BOM Update..."
+                                   readonly="status != 'draft'"/>
+                        </h1>
+                    </div>
+
+                    <group>
+                        <group string="ECO Details">
+                            <field name="eco_type"
+                                   readonly="status != 'draft'"/>
+                            <field name="pml_product_id"
+                                   readonly="status != 'draft'"/>
+<!--                            <field name="pml_product_id"-->
+<!--                                   readonly="status != 'draft'"-->
+<!--                                   invisible="eco_type != 'product'"-->
+<!--                                   domain="[('status','=','active')]"/>-->
+                            <field name="bill_of_material_id"
+                                   readonly="status != 'draft'"
+                                   invisible="eco_type != 'bill_of_material'"
+                                   domain="[('status','=','active')]"/>
+                        </group>
+                        <group string="Settings">
+                            <field name="user_id"
+                                   readonly="status != 'draft'"/>
+                            <field name="effective_date"
+                                   readonly="status != 'draft'"/>
+                            <field name="version_update"
+                                   readonly="status != 'draft'"/>
+                            <field name="stage_id"/>
+                            <field name="eco_applied" readonly="1"/>
+                        </group>
+                    </group>
+
+                    <notebook>
+                        <!-- Approval lines tab -->
+                        <page string="Approvals" name="approvals"
+                              invisible="approval_count == 0">
+                            <field name="approval_ids" readonly="status in ('done','canceled')">
+                                <list>
+                                    <field name="user_id"/>
+                                    <field name="stage_id"/>
+                                    <field name="approval_type"/>
+                                    <field name="status" widget="badge"
+                                           decoration-success="status == 'approved'"
+                                           decoration-danger="status == 'refused'"
+                                           decoration-warning="status == 'pending'"/>
+                                    <field name="date_approved"/>
+                                    <field name="comment"/>
+                                    <button name="action_approve" string="Approve"
+                                            type="object" class="btn-success"
+                                            invisible="status != 'pending'"/>
+                                    <button name="action_refuse" string="Refuse"
+                                            type="object" class="btn-danger"
+                                            invisible="status != 'pending'"/>
+                                </list>
+                            </field>
+                        </page>
+
+                        <!-- Note tab -->
+                        <page string="Note" name="note">
+                            <field name="note"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <!-- ── Search View ────────────────────────────────────────────────────── -->
+    <record id="view_pml_eco_search" model="ir.ui.view">
+        <field name="name">pml.eco.search</field>
+        <field name="model">pml.eco</field>
+        <field name="arch" type="xml">
+            <search string="Search ECOs">
+                <field name="name" string="Title"/>
+                <field name="pml_product_id" string="PML Product"/>
+                <field name="eco_type" string="ECO Type"/>
+                <field name="status" string="Status"/>
+                <filter name="draft" string="New" domain="[('status','=','draft')]"/>
+                <filter name="in_progress" string="In Progress" domain="[('status','=','in_progress')]"/>
+                <filter name="approved" string="Approved" domain="[('status','=','approved')]"/>
+                <filter name="done" string="Done" domain="[('status','=','done')]"/>
+                <filter name="eco_applied" string="ECO Applied" domain="[('eco_applied','=',True)]"/>
+                <separator/>
+                <filter name="my_ecos" string="My ECOs"
+                        domain="[('user_id','=',uid)]"/>
+                <group expand="0" string="Group By">
+                    <filter name="group_eco_type" string="ECO Type"
+                            context="{'group_by':'eco_type'}"/>
+                    <filter name="group_stage" string="Stage"
+                            context="{'group_by':'stage_id'}"/>
+                    <filter name="group_status" string="Status"
+                            context="{'group_by':'status'}"/>
+                    <filter name="group_user" string="User"
+                            context="{'group_by':'user_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- ── Action ─────────────────────────────────────────────────────────── -->
+    <record id="action_pml_eco" model="ir.actions.act_window">
+        <field name="name">Engineering Change Orders</field>
+        <field name="res_model">pml.eco</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_pml_eco_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first Engineering Change Order!
+            </p>
+        </field>
+    </record>
+
+    <!-- ── Reporting List Action ──────────────────────────────────────────── -->
+    <record id="action_pml_eco_reporting" model="ir.actions.act_window">
+        <field name="name">ECO Reporting</field>
+        <field name="res_model">pml.eco</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_pml_eco_search"/>
+        <field name="context">{'search_default_group_eco_type': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No ECOs found.
+            </p>
+        </field>
+    </record>
+
+</odoo>
