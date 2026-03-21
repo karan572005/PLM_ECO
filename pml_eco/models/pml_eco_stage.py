@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 from odoo import fields, models
 
-
 class PmlEcoStage(models.Model):
     _name = 'pml.eco.stage'
     _description = 'ECO Stage'
@@ -28,7 +27,6 @@ class PmlEcoStage(models.Model):
         'stage_id',
         string='Approvals',
     )
-
 
 class PmlEcoStageApproval(models.Model):
     _name = 'pml.eco.stage.approval'

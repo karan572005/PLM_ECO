@@ -203,8 +203,17 @@ class PmlEco(models.Model):
         my_approval.action_approve()
 
     def action_validate(self):
-        """No-approval path: directly validate/done."""
+        """Validate — only allowed if no approvers OR all required approvals done."""
         for rec in self:
+            required = rec.approval_ids.filtered(
+                lambda a: a.approval_type == 'required'
+            )
+            pending = required.filtered(lambda a: a.status == 'pending')
+            if pending:
+                approver_names = ', '.join(pending.mapped('user_id.name'))
+                raise UserError(
+                    'Cannot validate. Waiting for required approvals from: %s' % approver_names
+                )
             rec._apply_eco()
 
     def action_cancel(self):
@@ -293,6 +302,7 @@ class PmlEco(models.Model):
         if all_approved and required:
             self.write({'status': 'approved'})
             self.message_post(body='All required approvals received. ECO is Approved.')
+            self._apply_eco()
 
     def _apply_eco(self):
         """Apply the ECO: create new version, archive old, set effective date."""
@@ -375,6 +385,45 @@ class PmlEco(models.Model):
                             if matching_op:
                                 matching_op.write({'duration': op_line.new_duration})
             else:
+                # No version update — apply component/operation changes to existing BoM directly
+                if self.changes_id:
+                    changes = self.changes_id[0]
+
+                    for change_line in changes.bom_component_change_ids:
+                        matching = old_bom.component_ids.filtered(
+                            lambda c, cl=change_line: c.product_id.id == cl.product_id.id
+                        )
+                        if change_line.change_type == 'removed':
+                            matching.unlink()
+                        elif change_line.change_type == 'added':
+                            if not matching:
+                                self.env['pml.bom.component'].create({
+                                    'bom_id': old_bom.id,
+                                    'product_id': change_line.product_id.id,
+                                    'quantity': change_line.new_qty,
+                                    'uom_id': change_line.uom_id.id,
+                                })
+                        elif change_line.change_type == 'modified':
+                            if matching:
+                                matching.write({'quantity': change_line.new_qty})
+
+                    for op_line in changes.bom_operation_change_ids:
+                        matching_op = old_bom.operation_ids.filtered(
+                            lambda o, ol=op_line: o.name == ol.operation_name
+                        )
+                        if op_line.change_type == 'removed':
+                            matching_op.unlink()
+                        elif op_line.change_type == 'added':
+                            if not matching_op:
+                                self.env['pml.bom.operation'].create({
+                                    'bom_id': old_bom.id,
+                                    'name': op_line.operation_name,
+                                    'duration': op_line.new_duration,
+                                })
+                        elif op_line.change_type == 'modified':
+                            if matching_op:
+                                matching_op.write({'duration': op_line.new_duration})
+
                 old_bom.write({'status': 'active'})
 
         elif self.eco_type == 'product' and self.pml_product_id:
@@ -406,7 +455,18 @@ class PmlEco(models.Model):
                     if update_vals:
                         new_product.write(update_vals)
             else:
-                old_product.write({'status': 'active'})
+                # No version update — apply changes directly to existing product
+                update_vals = {'status': 'active'}
+
+                if self.changes_id:
+                    changes = self.changes_id[0]
+                    for change_line in changes.product_change_ids:
+                        if change_line.change_type == 'modified':
+                            if change_line.field_label == 'Sales Price':
+                                update_vals['sales_price'] = float(change_line.new_value or 0)
+                            elif change_line.field_label == 'Cost Price':
+                                update_vals['cost_price'] = float(change_line.new_value or 0)
+                old_product.write(update_vals)
 
         self.write({
             'status': 'done',

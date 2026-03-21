@@ -85,7 +85,6 @@ class PmlBom(models.Model):
 
     def copy(self, default=None):
         default = default or {}
-        # Ensure components and operations are copied
         new_bom = super().copy(default)
         return new_bom
 
