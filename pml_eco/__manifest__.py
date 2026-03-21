@@ -5,7 +5,7 @@
     'category': 'Manufacturing',
     'summary': 'Manage Engineering Change Orders for Products and Bills of Materials',
     'author': 'PML',
-    'depends': ['base', 'mail', 'product', 'mrp'],
+    'depends': ['base', 'mail', 'auth_signup','website'],
     'data': [
         'security/pml_security.xml',
         'security/ir.model.access.csv',

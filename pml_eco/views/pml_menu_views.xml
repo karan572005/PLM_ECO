@@ -3,9 +3,10 @@
 
     <!-- ── Root Menu ─────────────────────────────────────────────────────── -->
     <menuitem id="menu_pml_eco_root"
-              name="Engineering"
+              name="PLM Engineering"
               sequence="50"
-              web_icon="pml_eco,static/description/icon.png"/>
+              web_icon="pml_eco,static/description/icon.png"
+              groups="pml_eco.group_plm_operations,pml_eco.group_plm_engineer,pml_eco.group_plm_approver,pml_eco.group_plm_admin"/>
 
     <!-- ── ECO's Menu ────────────────────────────────────────────────────── -->
     <menuitem id="menu_pml_eco_ecos"

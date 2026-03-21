@@ -82,10 +82,8 @@ class PmlProduct(models.Model):
 
     @api.constrains('status')
     def _check_archived_readonly(self):
-        """Archived products cannot be edited."""
         for rec in self:
             if rec.status == 'archived':
-                # Post a message — actual readonly enforced via view
                 pass
 
     def write(self, vals):

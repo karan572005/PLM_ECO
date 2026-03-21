@@ -173,23 +173,22 @@ class PmlEco(models.Model):
     # ─── Actions ───────────────────────────────────────────────────────────────
 
     def action_start(self):
-        """Start the ECO - validate mandatory fields then lock them."""
-        for rec in self:
-            if not rec.name:
-                raise UserError('Title is required before starting.')
-            if not rec.eco_type:
-                raise UserError('ECO Type is required before starting.')
-            if not rec.pml_product_id:
-                raise UserError('Product is required before starting.')
-            if not rec.user_id:
-                raise UserError('User is required before starting.')
-            if rec.eco_type == 'bill_of_material' and not rec.bill_of_material_id:
-                raise UserError('Bill of Materials is required before starting.')
+        self.ensure_one()
+        if not self.name:
+            raise UserError('Title is required before starting.')
+        if not self.eco_type:
+            raise UserError('ECO Type is required before starting.')
+        if not self.pml_product_id:
+            raise UserError('Product is required before starting.')
+        if not self.user_id:
+            raise UserError('User is required before starting.')
+        if self.eco_type == 'bill_of_material' and not self.bill_of_material_id:
+            raise UserError('Bill of Materials is required before starting.')
 
             # Load approvals from current stage rules
-            rec._load_stage_approvals()
+        self._load_stage_approvals()
 
-            rec.write({'status': 'in_progress'})
+        self.write({'status': 'in_progress'})
 
     def action_approve(self):
         """Approve button - only the designated approver can click."""

@@ -3,6 +3,7 @@
     <record id="group_plm_engineer" model="res.groups">
         <field name="name">PLM / Engineering User</field>
         <field name="category_id" ref="base.module_category_manufacturing"/>
+        <field name="users" eval="[(4, ref('base.user_admin'))]"/>
         <field name="comment">Can create and modify ECOs, propose changes, initiate approvals.</field>
     </record>
 
