@@ -1,0 +1,2405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ===== pml.product DEMO DATA (300 records) ===== -->
+
+    <record id="pml_product_demo_001" model="pml.product">
+        <field name="name">Resistor 10kΩ 0805</field>
+        <field name="sales_price">51.52</field>
+        <field name="cost_price">31.81</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_002" model="pml.product">
+        <field name="name">Capacitor 100nF 0603</field>
+        <field name="sales_price">2816.59</field>
+        <field name="cost_price">1225.2</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_003" model="pml.product">
+        <field name="name">LED Red 5mm</field>
+        <field name="sales_price">2689.95</field>
+        <field name="cost_price">1552.26</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_004" model="pml.product">
+        <field name="name">NPN Transistor BC547</field>
+        <field name="sales_price">666.49</field>
+        <field name="cost_price">348.01</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_005" model="pml.product">
+        <field name="name">Voltage Regulator LM7805</field>
+        <field name="sales_price">348.54</field>
+        <field name="cost_price">169.22</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_006" model="pml.product">
+        <field name="name">Op-Amp LM358</field>
+        <field name="sales_price">1428.23</field>
+        <field name="cost_price">790.33</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_007" model="pml.product">
+        <field name="name">MOSFET IRF540N</field>
+        <field name="sales_price">2717.83</field>
+        <field name="cost_price">1374.9</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_008" model="pml.product">
+        <field name="name">Diode 1N4007</field>
+        <field name="sales_price">4918.36</field>
+        <field name="cost_price">3356.71</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_009" model="pml.product">
+        <field name="name">Zener Diode 5.1V</field>
+        <field name="sales_price">2646.53</field>
+        <field name="cost_price">1677.24</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_010" model="pml.product">
+        <field name="name">Crystal Oscillator 16MHz</field>
+        <field name="sales_price">2774.68</field>
+        <field name="cost_price">2014.74</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_011" model="pml.product">
+        <field name="name">Push Button Switch</field>
+        <field name="sales_price">522.31</field>
+        <field name="cost_price">369.45</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_012" model="pml.product">
+        <field name="name">Toggle Switch SPDT</field>
+        <field name="sales_price">1325.74</field>
+        <field name="cost_price">943.13</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_013" model="pml.product">
+        <field name="name">Rotary Encoder 24PPR</field>
+        <field name="sales_price">3712.63</field>
+        <field name="cost_price">1687.04</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_014" model="pml.product">
+        <field name="name">Potentiometer 10kΩ</field>
+        <field name="sales_price">1412.09</field>
+        <field name="cost_price">668.94</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_015" model="pml.product">
+        <field name="name">Buzzer 5V Active</field>
+        <field name="sales_price">1717.34</field>
+        <field name="cost_price">1100.17</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_016" model="pml.product">
+        <field name="name">IR Receiver Module</field>
+        <field name="sales_price">4264.45</field>
+        <field name="cost_price">2460.13</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_017" model="pml.product">
+        <field name="name">RGB LED WS2812B</field>
+        <field name="sales_price">1259.1</field>
+        <field name="cost_price">903.85</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_018" model="pml.product">
+        <field name="name">Hall Effect Sensor</field>
+        <field name="sales_price">258.69</field>
+        <field name="cost_price">160.91</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_019" model="pml.product">
+        <field name="name">Thermistor NTC 10kΩ</field>
+        <field name="sales_price">4146.76</field>
+        <field name="cost_price">1722.69</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_020" model="pml.product">
+        <field name="name">Photoresistor LDR</field>
+        <field name="sales_price">1670.78</field>
+        <field name="cost_price">744.81</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_021" model="pml.product">
+        <field name="name">Relay 5V SPDT</field>
+        <field name="sales_price">4898.11</field>
+        <field name="cost_price">2236.25</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_022" model="pml.product">
+        <field name="name">Optocoupler PC817</field>
+        <field name="sales_price">2211.53</field>
+        <field name="cost_price">1430.82</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_023" model="pml.product">
+        <field name="name">Schottky Diode BAT43</field>
+        <field name="sales_price">2806.17</field>
+        <field name="cost_price">1232.35</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_024" model="pml.product">
+        <field name="name">TVS Diode SMBJ5.0A</field>
+        <field name="sales_price">4724.58</field>
+        <field name="cost_price">3032.5</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_025" model="pml.product">
+        <field name="name">Ferrite Bead 600Ω</field>
+        <field name="sales_price">749.38</field>
+        <field name="cost_price">309.2</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_026" model="pml.product">
+        <field name="name">Inductor 10µH SMD</field>
+        <field name="sales_price">1848.86</field>
+        <field name="cost_price">1097.08</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_027" model="pml.product">
+        <field name="name">Tantalum Cap 10µF</field>
+        <field name="sales_price">2151.35</field>
+        <field name="cost_price">892.04</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_028" model="pml.product">
+        <field name="name">EEPROM 24C02</field>
+        <field name="sales_price">1826.07</field>
+        <field name="cost_price">1326.79</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_029" model="pml.product">
+        <field name="name">Logic Gate 74HC00</field>
+        <field name="sales_price">4860.15</field>
+        <field name="cost_price">2011.92</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_030" model="pml.product">
+        <field name="name">Shift Register 74HC595</field>
+        <field name="sales_price">1791.9</field>
+        <field name="cost_price">1144.53</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_031" model="pml.product">
+        <field name="name">Main Control Board Rev A</field>
+        <field name="sales_price">3335.67</field>
+        <field name="cost_price">1747.18</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_032" model="pml.product">
+        <field name="name">Power Supply Module 12V</field>
+        <field name="sales_price">2801.06</field>
+        <field name="cost_price">1977.97</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_033" model="pml.product">
+        <field name="name">Motor Driver Board L298N</field>
+        <field name="sales_price">4868.34</field>
+        <field name="cost_price">3224.39</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_034" model="pml.product">
+        <field name="name">Sensor Interface PCB</field>
+        <field name="sales_price">4628.26</field>
+        <field name="cost_price">2234.79</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_035" model="pml.product">
+        <field name="name">Display Driver Board</field>
+        <field name="sales_price">816.53</field>
+        <field name="cost_price">555.21</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_036" model="pml.product">
+        <field name="name">Communication Module UART</field>
+        <field name="sales_price">889.2</field>
+        <field name="cost_price">483.99</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_037" model="pml.product">
+        <field name="name">Battery Management PCB</field>
+        <field name="sales_price">900.73</field>
+        <field name="cost_price">651.74</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_038" model="pml.product">
+        <field name="name">EMC Filter Assembly</field>
+        <field name="sales_price">3912.24</field>
+        <field name="cost_price">2128.65</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_039" model="pml.product">
+        <field name="name">Connector Panel Board</field>
+        <field name="sales_price">3350.52</field>
+        <field name="cost_price">2202.2</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_040" model="pml.product">
+        <field name="name">Relay Output Board 8CH</field>
+        <field name="sales_price">1244.35</field>
+        <field name="cost_price">567.07</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_041" model="pml.product">
+        <field name="name">Analog Input Board 4CH</field>
+        <field name="sales_price">3507.18</field>
+        <field name="cost_price">1872.45</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_042" model="pml.product">
+        <field name="name">Digital I/O Expansion</field>
+        <field name="sales_price">198.39</field>
+        <field name="cost_price">112.04</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_043" model="pml.product">
+        <field name="name">Touch Sensor PCB</field>
+        <field name="sales_price">1001.67</field>
+        <field name="cost_price">722.66</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_044" model="pml.product">
+        <field name="name">Wireless Module PCB</field>
+        <field name="sales_price">1751.19</field>
+        <field name="cost_price">1203.4</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_045" model="pml.product">
+        <field name="name">Charging Controller Board</field>
+        <field name="sales_price">4356.39</field>
+        <field name="cost_price">2082.46</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_046" model="pml.product">
+        <field name="name">Isolated DC-DC Converter</field>
+        <field name="sales_price">3301.21</field>
+        <field name="cost_price">1780.88</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_047" model="pml.product">
+        <field name="name">CAN Bus Interface PCB</field>
+        <field name="sales_price">1396.34</field>
+        <field name="cost_price">592.46</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_048" model="pml.product">
+        <field name="name">RS485 Communication Board</field>
+        <field name="sales_price">3866.99</field>
+        <field name="cost_price">2022.05</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_049" model="pml.product">
+        <field name="name">Ethernet PHY Module</field>
+        <field name="sales_price">2548.97</field>
+        <field name="cost_price">1625.81</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_050" model="pml.product">
+        <field name="name">USB-C Power Delivery PCB</field>
+        <field name="sales_price">4218.24</field>
+        <field name="cost_price">2176.2</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_051" model="pml.product">
+        <field name="name">Aluminium Extrusion 20x20 1M</field>
+        <field name="sales_price">142.84</field>
+        <field name="cost_price">100.98</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_052" model="pml.product">
+        <field name="name">Steel Bracket L-Shape 50mm</field>
+        <field name="sales_price">1309.51</field>
+        <field name="cost_price">789.9</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_053" model="pml.product">
+        <field name="name">Nylon Spacer M3 10mm</field>
+        <field name="sales_price">4916.85</field>
+        <field name="cost_price">2032.58</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_054" model="pml.product">
+        <field name="name">Stainless Bolt M4x20</field>
+        <field name="sales_price">2984.28</field>
+        <field name="cost_price">1554.78</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_055" model="pml.product">
+        <field name="name">Hex Nut M4 Stainless</field>
+        <field name="sales_price">3932.42</field>
+        <field name="cost_price">2173.6</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_056" model="pml.product">
+        <field name="name">Spring Washer M4</field>
+        <field name="sales_price">4920.27</field>
+        <field name="cost_price">2167.26</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_057" model="pml.product">
+        <field name="name">Flat Washer M4</field>
+        <field name="sales_price">4497.13</field>
+        <field name="cost_price">2098.04</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_058" model="pml.product">
+        <field name="name">Rubber Grommet 8mm</field>
+        <field name="sales_price">226.67</field>
+        <field name="cost_price">125.26</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_059" model="pml.product">
+        <field name="name">DIN Rail 35mm 1M</field>
+        <field name="sales_price">2601.48</field>
+        <field name="cost_price">1774.93</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_060" model="pml.product">
+        <field name="name">Cable Duct 40x40 1M</field>
+        <field name="sales_price">3435.16</field>
+        <field name="cost_price">2504.55</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_061" model="pml.product">
+        <field name="name">Aluminium Sheet 2mm 300x200</field>
+        <field name="sales_price">3685.77</field>
+        <field name="cost_price">1728.49</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_062" model="pml.product">
+        <field name="name">Steel Sheet 1mm 200x200</field>
+        <field name="sales_price">2158.9</field>
+        <field name="cost_price">1580.54</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_063" model="pml.product">
+        <field name="name">Acrylic Panel 3mm 400x300</field>
+        <field name="sales_price">4603.33</field>
+        <field name="cost_price">2845.34</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_064" model="pml.product">
+        <field name="name">Hinge Stainless 50mm</field>
+        <field name="sales_price">3317.96</field>
+        <field name="cost_price">1471.91</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_065" model="pml.product">
+        <field name="name">Latch Draw Toggle</field>
+        <field name="sales_price">4499.83</field>
+        <field name="cost_price">2598.62</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_066" model="pml.product">
+        <field name="name">Panel Seal Foam 3mm</field>
+        <field name="sales_price">3335.46</field>
+        <field name="cost_price">1714.97</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_067" model="pml.product">
+        <field name="name">Cable Gland PG9</field>
+        <field name="sales_price">3486.86</field>
+        <field name="cost_price">2071.35</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_068" model="pml.product">
+        <field name="name">Cable Gland PG13.5</field>
+        <field name="sales_price">963.05</field>
+        <field name="cost_price">609.35</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_069" model="pml.product">
+        <field name="name">Blind Rivet 4x10</field>
+        <field name="sales_price">1898.45</field>
+        <field name="cost_price">1256.48</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_070" model="pml.product">
+        <field name="name">Threaded Insert M4</field>
+        <field name="sales_price">874.09</field>
+        <field name="cost_price">523.74</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_071" model="pml.product">
+        <field name="name">Shaft Coupler 6mm-8mm</field>
+        <field name="sales_price">2032.94</field>
+        <field name="cost_price">1406.4</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_072" model="pml.product">
+        <field name="name">Linear Bearing LM8UU</field>
+        <field name="sales_price">1522.55</field>
+        <field name="cost_price">721.02</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_073" model="pml.product">
+        <field name="name">Lead Screw 8mm 300mm</field>
+        <field name="sales_price">3929.08</field>
+        <field name="cost_price">2405.9</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_074" model="pml.product">
+        <field name="name">Belt GT2 6mm</field>
+        <field name="sales_price">1614.31</field>
+        <field name="cost_price">895.34</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_075" model="pml.product">
+        <field name="name">Pulley GT2 20T</field>
+        <field name="sales_price">3379.08</field>
+        <field name="cost_price">1956.19</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_076" model="pml.product">
+        <field name="name">Idler Pulley F695ZZ</field>
+        <field name="sales_price">3968.91</field>
+        <field name="cost_price">2920.88</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_077" model="pml.product">
+        <field name="name">Stepper Motor 42-38</field>
+        <field name="sales_price">3680.39</field>
+        <field name="cost_price">2320.85</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_078" model="pml.product">
+        <field name="name">Servo Motor MG996R</field>
+        <field name="sales_price">1422.23</field>
+        <field name="cost_price">899.35</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_079" model="pml.product">
+        <field name="name">NEMA23 Stepper Motor</field>
+        <field name="sales_price">3097.59</field>
+        <field name="cost_price">1340.28</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_080" model="pml.product">
+        <field name="name">Planetary Gearbox 10:1</field>
+        <field name="sales_price">4759.29</field>
+        <field name="cost_price">2294.95</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_081" model="pml.product">
+        <field name="name">IP65 Enclosure 200x150x80</field>
+        <field name="sales_price">1555.23</field>
+        <field name="cost_price">1061.13</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_082" model="pml.product">
+        <field name="name">Aluminium DIN Enclosure</field>
+        <field name="sales_price">740.89</field>
+        <field name="cost_price">308.34</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_083" model="pml.product">
+        <field name="name">Desktop Enclosure ABS</field>
+        <field name="sales_price">4918.78</field>
+        <field name="cost_price">3019.86</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_084" model="pml.product">
+        <field name="name">Panel Mount Housing</field>
+        <field name="sales_price">3842.84</field>
+        <field name="cost_price">2149.67</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_085" model="pml.product">
+        <field name="name">Waterproof Junction Box</field>
+        <field name="sales_price">4430.37</field>
+        <field name="cost_price">2664.8</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_086" model="pml.product">
+        <field name="name">19" Rack Chassis 1U</field>
+        <field name="sales_price">3592.42</field>
+        <field name="cost_price">1919.76</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_087" model="pml.product">
+        <field name="name">Handheld Enclosure 120x60x35</field>
+        <field name="sales_price">2000.87</field>
+        <field name="cost_price">903.69</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_088" model="pml.product">
+        <field name="name">PCB Project Box 100x60x25</field>
+        <field name="sales_price">3438.99</field>
+        <field name="cost_price">2450.04</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_089" model="pml.product">
+        <field name="name">Sealed Battery Box</field>
+        <field name="sales_price">4302.04</field>
+        <field name="cost_price">3054.07</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_090" model="pml.product">
+        <field name="name">Cable Management Box</field>
+        <field name="sales_price">3892.43</field>
+        <field name="cost_price">1855.11</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_091" model="pml.product">
+        <field name="name">JST-XH 2.54mm 2P Connector</field>
+        <field name="sales_price">4020.72</field>
+        <field name="cost_price">2587.61</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_092" model="pml.product">
+        <field name="name">JST-XH 2.54mm 4P Connector</field>
+        <field name="sales_price">2324.96</field>
+        <field name="cost_price">1383.57</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_093" model="pml.product">
+        <field name="name">Dupont 2.54mm Jumper Wire</field>
+        <field name="sales_price">4586.85</field>
+        <field name="cost_price">2029.57</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_094" model="pml.product">
+        <field name="name">Micro USB Cable 1M</field>
+        <field name="sales_price">670.9</field>
+        <field name="cost_price">377.47</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_095" model="pml.product">
+        <field name="name">USB-C Cable 2M</field>
+        <field name="sales_price">2657.47</field>
+        <field name="cost_price">1582.85</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_096" model="pml.product">
+        <field name="name">RJ45 Cat6 Patch Cable 3M</field>
+        <field name="sales_price">1589.59</field>
+        <field name="cost_price">1056.02</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_097" model="pml.product">
+        <field name="name">DC Barrel Jack 5.5/2.1mm</field>
+        <field name="sales_price">2215.21</field>
+        <field name="cost_price">1517.98</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_098" model="pml.product">
+        <field name="name">XT60 Connector Pair</field>
+        <field name="sales_price">4459.75</field>
+        <field name="cost_price">2450.0</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_099" model="pml.product">
+        <field name="name">Anderson PP45 Connector</field>
+        <field name="sales_price">4533.83</field>
+        <field name="cost_price">2521.13</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_100" model="pml.product">
+        <field name="name">WAGO 221-412 Lever Nut</field>
+        <field name="sales_price">799.83</field>
+        <field name="cost_price">561.1</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_101" model="pml.product">
+        <field name="name">Phoenix Contact Screw Terminal</field>
+        <field name="sales_price">2252.65</field>
+        <field name="cost_price">1493.78</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_102" model="pml.product">
+        <field name="name">D-Sub DB9 Male</field>
+        <field name="sales_price">4199.28</field>
+        <field name="cost_price">2087.29</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_103" model="pml.product">
+        <field name="name">Molex Connector 6P</field>
+        <field name="sales_price">3888.71</field>
+        <field name="cost_price">2215.04</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_104" model="pml.product">
+        <field name="name">IDC Ribbon Cable 10P</field>
+        <field name="sales_price">1199.79</field>
+        <field name="cost_price">664.63</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_105" model="pml.product">
+        <field name="name">Silicone Wire 22AWG Red 1M</field>
+        <field name="sales_price">3568.44</field>
+        <field name="cost_price">1720.25</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_106" model="pml.product">
+        <field name="name">Silicone Wire 22AWG Black 1M</field>
+        <field name="sales_price">1682.22</field>
+        <field name="cost_price">1198.68</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_107" model="pml.product">
+        <field name="name">Shielded Cable 2C 0.5mm²</field>
+        <field name="sales_price">407.4</field>
+        <field name="cost_price">184.47</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_108" model="pml.product">
+        <field name="name">CAT-5E Cable 10M</field>
+        <field name="sales_price">1917.88</field>
+        <field name="cost_price">869.72</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_109" model="pml.product">
+        <field name="name">Ferrule Connector E2512</field>
+        <field name="sales_price">1073.48</field>
+        <field name="cost_price">585.27</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_110" model="pml.product">
+        <field name="name">Heat Shrink Tube 3.2mm</field>
+        <field name="sales_price">1657.42</field>
+        <field name="cost_price">933.25</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_111" model="pml.product">
+        <field name="name">Smart Temperature Controller</field>
+        <field name="sales_price">315.95</field>
+        <field name="cost_price">218.48</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_112" model="pml.product">
+        <field name="name">Automated Conveyor Driver</field>
+        <field name="sales_price">1950.05</field>
+        <field name="cost_price">1305.42</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_113" model="pml.product">
+        <field name="name">CNC Spindle Controller</field>
+        <field name="sales_price">4729.63</field>
+        <field name="cost_price">1924.18</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_114" model="pml.product">
+        <field name="name">PLC Replacement Module</field>
+        <field name="sales_price">4403.0</field>
+        <field name="cost_price">2648.37</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_115" model="pml.product">
+        <field name="name">IoT Gateway Device</field>
+        <field name="sales_price">2387.04</field>
+        <field name="cost_price">1742.44</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_116" model="pml.product">
+        <field name="name">Energy Monitor 3-Phase</field>
+        <field name="sales_price">1496.27</field>
+        <field name="cost_price">802.74</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_117" model="pml.product">
+        <field name="name">Motion Controller 4-Axis</field>
+        <field name="sales_price">4457.86</field>
+        <field name="cost_price">3087.09</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_118" model="pml.product">
+        <field name="name">Servo Drive 750W</field>
+        <field name="sales_price">2692.87</field>
+        <field name="cost_price">1769.54</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_119" model="pml.product">
+        <field name="name">Variable Frequency Drive 1.5kW</field>
+        <field name="sales_price">3999.54</field>
+        <field name="cost_price">2856.61</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_120" model="pml.product">
+        <field name="name">Data Logger Industrial</field>
+        <field name="sales_price">2443.22</field>
+        <field name="cost_price">1210.68</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_121" model="pml.product">
+        <field name="name">HMI Panel 7 Inch</field>
+        <field name="sales_price">2430.3</field>
+        <field name="cost_price">1302.88</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_122" model="pml.product">
+        <field name="name">SCADA Interface Unit</field>
+        <field name="sales_price">3345.35</field>
+        <field name="cost_price">2272.66</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_123" model="pml.product">
+        <field name="name">Pressure Controller Digital</field>
+        <field name="sales_price">3621.56</field>
+        <field name="cost_price">2514.0</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_124" model="pml.product">
+        <field name="name">Flow Meter Electronic</field>
+        <field name="sales_price">4597.19</field>
+        <field name="cost_price">3416.87</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_125" model="pml.product">
+        <field name="name">Level Sensor Smart</field>
+        <field name="sales_price">2672.41</field>
+        <field name="cost_price">1917.25</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_126" model="pml.product">
+        <field name="name">Torque Controller Module</field>
+        <field name="sales_price">2960.91</field>
+        <field name="cost_price">1871.44</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_127" model="pml.product">
+        <field name="name">Vibration Monitor Unit</field>
+        <field name="sales_price">424.23</field>
+        <field name="cost_price">233.33</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_128" model="pml.product">
+        <field name="name">Laser Distance Sensor</field>
+        <field name="sales_price">4334.06</field>
+        <field name="cost_price">2009.29</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_129" model="pml.product">
+        <field name="name">Machine Vision Controller</field>
+        <field name="sales_price">1304.22</field>
+        <field name="cost_price">671.12</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_130" model="pml.product">
+        <field name="name">Robot Arm Controller 6DOF</field>
+        <field name="sales_price">2275.77</field>
+        <field name="cost_price">1179.13</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_131" model="pml.product">
+        <field name="name">Aluminium DIN Enclosure Lite</field>
+        <field name="sales_price">4397.92</field>
+        <field name="cost_price">2187.48</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_132" model="pml.product">
+        <field name="name">NPN Transistor BC547 v2</field>
+        <field name="sales_price">4755.31</field>
+        <field name="cost_price">2603.76</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_133" model="pml.product">
+        <field name="name">Power Supply Module 12V Gen2</field>
+        <field name="sales_price">4174.55</field>
+        <field name="cost_price">2356.98</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_134" model="pml.product">
+        <field name="name">Hall Effect Sensor Lite</field>
+        <field name="sales_price">3745.63</field>
+        <field name="cost_price">1566.53</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_135" model="pml.product">
+        <field name="name">Handheld Enclosure 120x60x35 Ultra</field>
+        <field name="sales_price">4758.89</field>
+        <field name="cost_price">2277.02</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_136" model="pml.product">
+        <field name="name">Toggle Switch SPDT Standard</field>
+        <field name="sales_price">347.68</field>
+        <field name="cost_price">255.56</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_137" model="pml.product">
+        <field name="name">Hex Nut M4 Stainless Pro</field>
+        <field name="sales_price">206.05</field>
+        <field name="cost_price">84.66</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_138" model="pml.product">
+        <field name="name">NPN Transistor BC547 Lite</field>
+        <field name="sales_price">1239.93</field>
+        <field name="cost_price">860.18</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_139" model="pml.product">
+        <field name="name">EEPROM 24C02 Gen2</field>
+        <field name="sales_price">3107.95</field>
+        <field name="cost_price">1502.67</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_140" model="pml.product">
+        <field name="name">Latch Draw Toggle Standard</field>
+        <field name="sales_price">2369.96</field>
+        <field name="cost_price">1042.87</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_141" model="pml.product">
+        <field name="name">NPN Transistor BC547 Ultra</field>
+        <field name="sales_price">4738.1</field>
+        <field name="cost_price">2666.42</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_142" model="pml.product">
+        <field name="name">Inductor 10µH SMD Ultra</field>
+        <field name="sales_price">1284.68</field>
+        <field name="cost_price">679.74</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_143" model="pml.product">
+        <field name="name">Stainless Bolt M4x20 Gen2</field>
+        <field name="sales_price">3030.83</field>
+        <field name="cost_price">2234.65</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_144" model="pml.product">
+        <field name="name">Rubber Grommet 8mm Standard</field>
+        <field name="sales_price">3592.48</field>
+        <field name="cost_price">2414.96</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_145" model="pml.product">
+        <field name="name">Communication Module UART Pro</field>
+        <field name="sales_price">822.85</field>
+        <field name="cost_price">418.72</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_146" model="pml.product">
+        <field name="name">XT60 Connector Pair Plus</field>
+        <field name="sales_price">2894.95</field>
+        <field name="cost_price">2099.16</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_147" model="pml.product">
+        <field name="name">Cable Management Box Mini</field>
+        <field name="sales_price">2880.53</field>
+        <field name="cost_price">2067.67</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_148" model="pml.product">
+        <field name="name">Wireless Module PCB v2</field>
+        <field name="sales_price">1879.28</field>
+        <field name="cost_price">1370.96</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_149" model="pml.product">
+        <field name="name">Photoresistor LDR Gen2</field>
+        <field name="sales_price">995.46</field>
+        <field name="cost_price">604.48</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_150" model="pml.product">
+        <field name="name">XT60 Connector Pair Advanced</field>
+        <field name="sales_price">4152.87</field>
+        <field name="cost_price">2014.13</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_151" model="pml.product">
+        <field name="name">Potentiometer 10kΩ Lite</field>
+        <field name="sales_price">3486.78</field>
+        <field name="cost_price">1762.76</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_152" model="pml.product">
+        <field name="name">Ethernet PHY Module Lite</field>
+        <field name="sales_price">3422.19</field>
+        <field name="cost_price">2333.71</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_153" model="pml.product">
+        <field name="name">Isolated DC-DC Converter Advanced</field>
+        <field name="sales_price">3981.36</field>
+        <field name="cost_price">2381.16</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_154" model="pml.product">
+        <field name="name">Servo Motor MG996R v2</field>
+        <field name="sales_price">210.1</field>
+        <field name="cost_price">123.22</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_155" model="pml.product">
+        <field name="name">Op-Amp LM358 Max</field>
+        <field name="sales_price">3308.64</field>
+        <field name="cost_price">1403.31</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_156" model="pml.product">
+        <field name="name">Blind Rivet 4x10 Lite</field>
+        <field name="sales_price">3238.83</field>
+        <field name="cost_price">1309.87</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_157" model="pml.product">
+        <field name="name">Shaft Coupler 6mm-8mm v2</field>
+        <field name="sales_price">2102.77</field>
+        <field name="cost_price">1201.88</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_158" model="pml.product">
+        <field name="name">IP65 Enclosure 200x150x80 Standard</field>
+        <field name="sales_price">2170.02</field>
+        <field name="cost_price">1143.09</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_159" model="pml.product">
+        <field name="name">CAN Bus Interface PCB Standard</field>
+        <field name="sales_price">4457.53</field>
+        <field name="cost_price">2500.27</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_160" model="pml.product">
+        <field name="name">Ferrite Bead 600Ω Lite</field>
+        <field name="sales_price">769.04</field>
+        <field name="cost_price">355.03</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_161" model="pml.product">
+        <field name="name">Op-Amp LM358 Gen2</field>
+        <field name="sales_price">2610.6</field>
+        <field name="cost_price">1638.57</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_162" model="pml.product">
+        <field name="name">Anderson PP45 Connector v2</field>
+        <field name="sales_price">3080.87</field>
+        <field name="cost_price">2223.98</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_163" model="pml.product">
+        <field name="name">Push Button Switch Gen2</field>
+        <field name="sales_price">3873.56</field>
+        <field name="cost_price">2179.67</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_164" model="pml.product">
+        <field name="name">Rotary Encoder 24PPR Mini</field>
+        <field name="sales_price">4128.72</field>
+        <field name="cost_price">2507.64</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_165" model="pml.product">
+        <field name="name">Communication Module UART Max</field>
+        <field name="sales_price">1614.59</field>
+        <field name="cost_price">784.57</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_166" model="pml.product">
+        <field name="name">Aluminium DIN Enclosure Advanced</field>
+        <field name="sales_price">4672.5</field>
+        <field name="cost_price">2325.15</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_167" model="pml.product">
+        <field name="name">Relay 5V SPDT Advanced</field>
+        <field name="sales_price">2256.31</field>
+        <field name="cost_price">1495.18</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_168" model="pml.product">
+        <field name="name">Isolated DC-DC Converter Gen2</field>
+        <field name="sales_price">2850.83</field>
+        <field name="cost_price">1807.04</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_169" model="pml.product">
+        <field name="name">19" Rack Chassis 1U v2</field>
+        <field name="sales_price">1684.96</field>
+        <field name="cost_price">965.49</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_170" model="pml.product">
+        <field name="name">Cable Management Box Lite</field>
+        <field name="sales_price">1628.12</field>
+        <field name="cost_price">929.07</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_171" model="pml.product">
+        <field name="name">Servo Motor MG996R Plus</field>
+        <field name="sales_price">1777.0</field>
+        <field name="cost_price">871.48</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_172" model="pml.product">
+        <field name="name">Blind Rivet 4x10 Gen2</field>
+        <field name="sales_price">1401.61</field>
+        <field name="cost_price">853.1</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_173" model="pml.product">
+        <field name="name">Relay 5V SPDT Max</field>
+        <field name="sales_price">4400.26</field>
+        <field name="cost_price">2616.07</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_174" model="pml.product">
+        <field name="name">Ethernet PHY Module v2</field>
+        <field name="sales_price">2585.04</field>
+        <field name="cost_price">1206.88</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_175" model="pml.product">
+        <field name="name">Aluminium DIN Enclosure Ultra</field>
+        <field name="sales_price">1210.33</field>
+        <field name="cost_price">656.3</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_176" model="pml.product">
+        <field name="name">Logic Gate 74HC00 Advanced</field>
+        <field name="sales_price">2777.55</field>
+        <field name="cost_price">1344.65</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_177" model="pml.product">
+        <field name="name">Anderson PP45 Connector Pro</field>
+        <field name="sales_price">2382.61</field>
+        <field name="cost_price">1546.66</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_178" model="pml.product">
+        <field name="name">Shift Register 74HC595 Pro</field>
+        <field name="sales_price">2243.18</field>
+        <field name="cost_price">910.81</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_179" model="pml.product">
+        <field name="name">Analog Input Board 4CH Mini</field>
+        <field name="sales_price">1474.41</field>
+        <field name="cost_price">798.45</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_180" model="pml.product">
+        <field name="name">Display Driver Board Lite</field>
+        <field name="sales_price">1220.07</field>
+        <field name="cost_price">771.56</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_181" model="pml.product">
+        <field name="name">EEPROM 24C02 Standard</field>
+        <field name="sales_price">1847.89</field>
+        <field name="cost_price">1097.12</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_182" model="pml.product">
+        <field name="name">JST-XH 2.54mm 4P Connector Advanced</field>
+        <field name="sales_price">1721.72</field>
+        <field name="cost_price">1289.26</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_183" model="pml.product">
+        <field name="name">EEPROM 24C02 Max</field>
+        <field name="sales_price">2753.64</field>
+        <field name="cost_price">1440.52</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_184" model="pml.product">
+        <field name="name">Aluminium Extrusion 20x20 1M Max</field>
+        <field name="sales_price">2271.0</field>
+        <field name="cost_price">1152.12</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_185" model="pml.product">
+        <field name="name">Thermistor NTC 10kΩ v2</field>
+        <field name="sales_price">1156.31</field>
+        <field name="cost_price">754.43</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_186" model="pml.product">
+        <field name="name">Hall Effect Sensor Gen2</field>
+        <field name="sales_price">1580.85</field>
+        <field name="cost_price">1043.37</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_187" model="pml.product">
+        <field name="name">RJ45 Cat6 Patch Cable 3M Ultra</field>
+        <field name="sales_price">4753.68</field>
+        <field name="cost_price">3049.76</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_188" model="pml.product">
+        <field name="name">Blind Rivet 4x10 v2</field>
+        <field name="sales_price">961.56</field>
+        <field name="cost_price">633.2</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_189" model="pml.product">
+        <field name="name">RJ45 Cat6 Patch Cable 3M Standard</field>
+        <field name="sales_price">1385.84</field>
+        <field name="cost_price">840.31</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_190" model="pml.product">
+        <field name="name">Hex Nut M4 Stainless Standard</field>
+        <field name="sales_price">3801.48</field>
+        <field name="cost_price">2314.63</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_191" model="pml.product">
+        <field name="name">Steel Bracket L-Shape 50mm Advanced</field>
+        <field name="sales_price">4901.67</field>
+        <field name="cost_price">3389.11</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_192" model="pml.product">
+        <field name="name">Logic Gate 74HC00 Plus</field>
+        <field name="sales_price">1484.45</field>
+        <field name="cost_price">781.28</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_193" model="pml.product">
+        <field name="name">Panel Seal Foam 3mm Max</field>
+        <field name="sales_price">1514.52</field>
+        <field name="cost_price">981.12</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_194" model="pml.product">
+        <field name="name">Toggle Switch SPDT Pro</field>
+        <field name="sales_price">637.16</field>
+        <field name="cost_price">265.01</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_195" model="pml.product">
+        <field name="name">Buzzer 5V Active Plus</field>
+        <field name="sales_price">277.3</field>
+        <field name="cost_price">139.27</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_196" model="pml.product">
+        <field name="name">IP65 Enclosure 200x150x80 Plus</field>
+        <field name="sales_price">4719.78</field>
+        <field name="cost_price">2941.62</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_197" model="pml.product">
+        <field name="name">PCB Project Box 100x60x25 Mini</field>
+        <field name="sales_price">3764.44</field>
+        <field name="cost_price">1640.94</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_198" model="pml.product">
+        <field name="name">Stepper Motor 42-38 Lite</field>
+        <field name="sales_price">66.25</field>
+        <field name="cost_price">33.09</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_199" model="pml.product">
+        <field name="name">USB-C Power Delivery PCB Mini</field>
+        <field name="sales_price">2395.7</field>
+        <field name="cost_price">1243.96</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_200" model="pml.product">
+        <field name="name">Stepper Motor 42-38 Max</field>
+        <field name="sales_price">4826.7</field>
+        <field name="cost_price">2357.2</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_201" model="pml.product">
+        <field name="name">Cable Gland PG13.5 v2</field>
+        <field name="sales_price">4308.44</field>
+        <field name="cost_price">1895.41</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_202" model="pml.product">
+        <field name="name">Shaft Coupler 6mm-8mm Pro</field>
+        <field name="sales_price">331.33</field>
+        <field name="cost_price">189.56</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_203" model="pml.product">
+        <field name="name">PCB Project Box 100x60x25 Lite</field>
+        <field name="sales_price">2886.64</field>
+        <field name="cost_price">1848.19</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_204" model="pml.product">
+        <field name="name">PCB Project Box 100x60x25 Ultra</field>
+        <field name="sales_price">762.72</field>
+        <field name="cost_price">521.62</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_205" model="pml.product">
+        <field name="name">DC Barrel Jack 5.5/2.1mm v2</field>
+        <field name="sales_price">4744.93</field>
+        <field name="cost_price">2039.43</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_206" model="pml.product">
+        <field name="name">Anderson PP45 Connector Advanced</field>
+        <field name="sales_price">1244.47</field>
+        <field name="cost_price">740.86</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_207" model="pml.product">
+        <field name="name">Buzzer 5V Active v2</field>
+        <field name="sales_price">2083.37</field>
+        <field name="cost_price">1268.03</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_208" model="pml.product">
+        <field name="name">Spring Washer M4 Plus</field>
+        <field name="sales_price">3093.38</field>
+        <field name="cost_price">2077.18</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_209" model="pml.product">
+        <field name="name">DIN Rail 35mm 1M Pro</field>
+        <field name="sales_price">1904.61</field>
+        <field name="cost_price">1367.47</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_210" model="pml.product">
+        <field name="name">Dupont 2.54mm Jumper Wire v2</field>
+        <field name="sales_price">1489.98</field>
+        <field name="cost_price">902.9</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_211" model="pml.product">
+        <field name="name">Latch Draw Toggle Plus</field>
+        <field name="sales_price">2146.58</field>
+        <field name="cost_price">1285.85</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_212" model="pml.product">
+        <field name="name">Latch Draw Toggle Lite</field>
+        <field name="sales_price">305.79</field>
+        <field name="cost_price">225.07</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_213" model="pml.product">
+        <field name="name">IP65 Enclosure 200x150x80 v2</field>
+        <field name="sales_price">500.57</field>
+        <field name="cost_price">333.86</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_214" model="pml.product">
+        <field name="name">Servo Motor MG996R Gen2</field>
+        <field name="sales_price">3128.82</field>
+        <field name="cost_price">1541.34</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_215" model="pml.product">
+        <field name="name">Photoresistor LDR Advanced</field>
+        <field name="sales_price">410.45</field>
+        <field name="cost_price">198.64</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_216" model="pml.product">
+        <field name="name">Threaded Insert M4 Ultra</field>
+        <field name="sales_price">2761.65</field>
+        <field name="cost_price">1255.96</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_217" model="pml.product">
+        <field name="name">Resistor 10kΩ 0805 Standard</field>
+        <field name="sales_price">2045.14</field>
+        <field name="cost_price">1311.51</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_218" model="pml.product">
+        <field name="name">Digital I/O Expansion Max</field>
+        <field name="sales_price">2351.74</field>
+        <field name="cost_price">967.56</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_219" model="pml.product">
+        <field name="name">LED Red 5mm Lite</field>
+        <field name="sales_price">1443.8</field>
+        <field name="cost_price">720.39</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_220" model="pml.product">
+        <field name="name">CAN Bus Interface PCB v2</field>
+        <field name="sales_price">4297.88</field>
+        <field name="cost_price">1826.22</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_221" model="pml.product">
+        <field name="name">Main Control Board Rev A Pro</field>
+        <field name="sales_price">1170.72</field>
+        <field name="cost_price">576.69</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_222" model="pml.product">
+        <field name="name">Main Control Board Rev A Standard</field>
+        <field name="sales_price">3956.49</field>
+        <field name="cost_price">2399.32</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_223" model="pml.product">
+        <field name="name">Push Button Switch Lite</field>
+        <field name="sales_price">4019.7</field>
+        <field name="cost_price">1886.19</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_224" model="pml.product">
+        <field name="name">Micro USB Cable 1M Max</field>
+        <field name="sales_price">578.19</field>
+        <field name="cost_price">276.77</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_225" model="pml.product">
+        <field name="name">Zener Diode 5.1V Ultra</field>
+        <field name="sales_price">749.05</field>
+        <field name="cost_price">369.26</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_226" model="pml.product">
+        <field name="name">Anderson PP45 Connector Plus</field>
+        <field name="sales_price">715.33</field>
+        <field name="cost_price">301.06</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_227" model="pml.product">
+        <field name="name">RGB LED WS2812B Max</field>
+        <field name="sales_price">3963.39</field>
+        <field name="cost_price">2410.79</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_228" model="pml.product">
+        <field name="name">Shaft Coupler 6mm-8mm Plus</field>
+        <field name="sales_price">4121.26</field>
+        <field name="cost_price">2977.27</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_229" model="pml.product">
+        <field name="name">Sensor Interface PCB Ultra</field>
+        <field name="sales_price">2198.13</field>
+        <field name="cost_price">1239.84</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_230" model="pml.product">
+        <field name="name">Servo Motor MG996R Mini</field>
+        <field name="sales_price">1523.63</field>
+        <field name="cost_price">824.1</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_231" model="pml.product">
+        <field name="name">EEPROM 24C02 Ultra</field>
+        <field name="sales_price">1364.6</field>
+        <field name="cost_price">803.74</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_232" model="pml.product">
+        <field name="name">DC Barrel Jack 5.5/2.1mm Gen2</field>
+        <field name="sales_price">2191.17</field>
+        <field name="cost_price">1335.11</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_233" model="pml.product">
+        <field name="name">JST-XH 2.54mm 4P Connector v2</field>
+        <field name="sales_price">4446.78</field>
+        <field name="cost_price">2921.92</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_234" model="pml.product">
+        <field name="name">Flat Washer M4 Ultra</field>
+        <field name="sales_price">3019.95</field>
+        <field name="cost_price">1235.32</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_235" model="pml.product">
+        <field name="name">Rubber Grommet 8mm Lite</field>
+        <field name="sales_price">1148.25</field>
+        <field name="cost_price">730.29</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_236" model="pml.product">
+        <field name="name">Zener Diode 5.1V Advanced</field>
+        <field name="sales_price">4302.42</field>
+        <field name="cost_price">2605.09</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_237" model="pml.product">
+        <field name="name">LED Red 5mm Standard</field>
+        <field name="sales_price">108.6</field>
+        <field name="cost_price">72.51</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_238" model="pml.product">
+        <field name="name">Shaft Coupler 6mm-8mm Gen2</field>
+        <field name="sales_price">4107.18</field>
+        <field name="cost_price">2471.23</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_239" model="pml.product">
+        <field name="name">Idler Pulley F695ZZ Gen2</field>
+        <field name="sales_price">3815.97</field>
+        <field name="cost_price">1760.37</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_240" model="pml.product">
+        <field name="name">Resistor 10kΩ 0805 Lite</field>
+        <field name="sales_price">2596.71</field>
+        <field name="cost_price">1440.6</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_241" model="pml.product">
+        <field name="name">JST-XH 2.54mm 2P Connector Pro</field>
+        <field name="sales_price">1394.11</field>
+        <field name="cost_price">1044.09</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_242" model="pml.product">
+        <field name="name">Shift Register 74HC595 Lite</field>
+        <field name="sales_price">2181.81</field>
+        <field name="cost_price">1494.51</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_243" model="pml.product">
+        <field name="name">Voltage Regulator LM7805 Advanced</field>
+        <field name="sales_price">4844.46</field>
+        <field name="cost_price">2734.72</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_244" model="pml.product">
+        <field name="name">Crystal Oscillator 16MHz Ultra</field>
+        <field name="sales_price">2044.29</field>
+        <field name="cost_price">1047.43</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_245" model="pml.product">
+        <field name="name">Main Control Board Rev A v2</field>
+        <field name="sales_price">527.37</field>
+        <field name="cost_price">240.63</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_246" model="pml.product">
+        <field name="name">19" Rack Chassis 1U Max</field>
+        <field name="sales_price">2060.76</field>
+        <field name="cost_price">1181.67</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_247" model="pml.product">
+        <field name="name">RGB LED WS2812B Standard</field>
+        <field name="sales_price">3313.94</field>
+        <field name="cost_price">1790.05</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_248" model="pml.product">
+        <field name="name">Belt GT2 6mm Max</field>
+        <field name="sales_price">3802.94</field>
+        <field name="cost_price">1570.02</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_249" model="pml.product">
+        <field name="name">Power Supply Module 12V Max</field>
+        <field name="sales_price">444.77</field>
+        <field name="cost_price">217.2</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_250" model="pml.product">
+        <field name="name">Nylon Spacer M3 10mm Gen2</field>
+        <field name="sales_price">583.91</field>
+        <field name="cost_price">391.45</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_251" model="pml.product">
+        <field name="name">Rotary Encoder 24PPR Lite</field>
+        <field name="sales_price">4324.36</field>
+        <field name="cost_price">2978.29</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_252" model="pml.product">
+        <field name="name">Waterproof Junction Box Mini</field>
+        <field name="sales_price">10.75</field>
+        <field name="cost_price">7.57</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_253" model="pml.product">
+        <field name="name">Isolated DC-DC Converter Mini</field>
+        <field name="sales_price">2312.11</field>
+        <field name="cost_price">968.71</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_254" model="pml.product">
+        <field name="name">Nylon Spacer M3 10mm Max</field>
+        <field name="sales_price">2594.09</field>
+        <field name="cost_price">1602.94</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_255" model="pml.product">
+        <field name="name">Micro USB Cable 1M Pro</field>
+        <field name="sales_price">2494.47</field>
+        <field name="cost_price">1383.72</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_256" model="pml.product">
+        <field name="name">Handheld Enclosure 120x60x35 Lite</field>
+        <field name="sales_price">262.75</field>
+        <field name="cost_price">129.66</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_257" model="pml.product">
+        <field name="name">Diode 1N4007 Mini</field>
+        <field name="sales_price">659.28</field>
+        <field name="cost_price">330.17</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_258" model="pml.product">
+        <field name="name">Micro USB Cable 1M Advanced</field>
+        <field name="sales_price">4403.95</field>
+        <field name="cost_price">2508.71</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_259" model="pml.product">
+        <field name="name">Potentiometer 10kΩ Gen2</field>
+        <field name="sales_price">149.17</field>
+        <field name="cost_price">92.56</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_260" model="pml.product">
+        <field name="name">Ferrite Bead 600Ω Gen2</field>
+        <field name="sales_price">3996.77</field>
+        <field name="cost_price">2591.6</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_261" model="pml.product">
+        <field name="name">Blind Rivet 4x10 Max</field>
+        <field name="sales_price">1556.89</field>
+        <field name="cost_price">630.21</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_262" model="pml.product">
+        <field name="name">Hall Effect Sensor Mini</field>
+        <field name="sales_price">2042.51</field>
+        <field name="cost_price">977.64</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_263" model="pml.product">
+        <field name="name">TVS Diode SMBJ5.0A v2</field>
+        <field name="sales_price">4206.98</field>
+        <field name="cost_price">1849.86</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_264" model="pml.product">
+        <field name="name">Cable Duct 40x40 1M Gen2</field>
+        <field name="sales_price">4734.62</field>
+        <field name="cost_price">2967.18</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_265" model="pml.product">
+        <field name="name">Crystal Oscillator 16MHz Max</field>
+        <field name="sales_price">773.93</field>
+        <field name="cost_price">562.2</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_266" model="pml.product">
+        <field name="name">Shaft Coupler 6mm-8mm Lite</field>
+        <field name="sales_price">1462.56</field>
+        <field name="cost_price">946.12</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_267" model="pml.product">
+        <field name="name">MOSFET IRF540N Ultra</field>
+        <field name="sales_price">2079.96</field>
+        <field name="cost_price">1183.24</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_268" model="pml.product">
+        <field name="name">Capacitor 100nF 0603 Lite</field>
+        <field name="sales_price">2363.27</field>
+        <field name="cost_price">1323.14</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_269" model="pml.product">
+        <field name="name">Optocoupler PC817 Mini</field>
+        <field name="sales_price">727.34</field>
+        <field name="cost_price">339.46</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_270" model="pml.product">
+        <field name="name">Acrylic Panel 3mm 400x300 Max</field>
+        <field name="sales_price">2998.29</field>
+        <field name="cost_price">1982.48</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_271" model="pml.product">
+        <field name="name">EEPROM 24C02 Mini</field>
+        <field name="sales_price">686.72</field>
+        <field name="cost_price">291.47</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_272" model="pml.product">
+        <field name="name">Diode 1N4007 Plus</field>
+        <field name="sales_price">3863.74</field>
+        <field name="cost_price">2700.93</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_273" model="pml.product">
+        <field name="name">Ethernet PHY Module Pro</field>
+        <field name="sales_price">1702.34</field>
+        <field name="cost_price">1150.27</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_274" model="pml.product">
+        <field name="name">USB-C Power Delivery PCB v2</field>
+        <field name="sales_price">1339.26</field>
+        <field name="cost_price">536.91</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_275" model="pml.product">
+        <field name="name">DIN Rail 35mm 1M v2</field>
+        <field name="sales_price">3630.9</field>
+        <field name="cost_price">2516.64</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_276" model="pml.product">
+        <field name="name">Hex Nut M4 Stainless Ultra</field>
+        <field name="sales_price">2901.14</field>
+        <field name="cost_price">1830.56</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_277" model="pml.product">
+        <field name="name">Waterproof Junction Box Max</field>
+        <field name="sales_price">4326.11</field>
+        <field name="cost_price">2406.58</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_278" model="pml.product">
+        <field name="name">EMC Filter Assembly Gen2</field>
+        <field name="sales_price">2423.8</field>
+        <field name="cost_price">1251.54</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_279" model="pml.product">
+        <field name="name">Diode 1N4007 Standard</field>
+        <field name="sales_price">3814.79</field>
+        <field name="cost_price">2029.56</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_280" model="pml.product">
+        <field name="name">USB-C Cable 2M Ultra</field>
+        <field name="sales_price">4663.66</field>
+        <field name="cost_price">3284.9</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_281" model="pml.product">
+        <field name="name">Diode 1N4007 Advanced</field>
+        <field name="sales_price">4902.99</field>
+        <field name="cost_price">2371.0</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_282" model="pml.product">
+        <field name="name">Diode 1N4007 Pro</field>
+        <field name="sales_price">1917.56</field>
+        <field name="cost_price">1341.53</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_283" model="pml.product">
+        <field name="name">Pulley GT2 20T Max</field>
+        <field name="sales_price">2056.41</field>
+        <field name="cost_price">1051.57</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_284" model="pml.product">
+        <field name="name">Latch Draw Toggle Ultra</field>
+        <field name="sales_price">2367.04</field>
+        <field name="cost_price">1703.56</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_285" model="pml.product">
+        <field name="name">Relay 5V SPDT Pro</field>
+        <field name="sales_price">1908.87</field>
+        <field name="cost_price">1423.91</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_286" model="pml.product">
+        <field name="name">Panel Seal Foam 3mm Lite</field>
+        <field name="sales_price">3962.21</field>
+        <field name="cost_price">2489.09</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_287" model="pml.product">
+        <field name="name">TVS Diode SMBJ5.0A Lite</field>
+        <field name="sales_price">764.61</field>
+        <field name="cost_price">564.04</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_288" model="pml.product">
+        <field name="name">Handheld Enclosure 120x60x35 Gen2</field>
+        <field name="sales_price">635.47</field>
+        <field name="cost_price">468.9</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_289" model="pml.product">
+        <field name="name">Steel Bracket L-Shape 50mm Lite</field>
+        <field name="sales_price">1662.98</field>
+        <field name="cost_price">723.61</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_290" model="pml.product">
+        <field name="name">Lead Screw 8mm 300mm Gen2</field>
+        <field name="sales_price">4225.13</field>
+        <field name="cost_price">1837.51</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_291" model="pml.product">
+        <field name="name">Pulley GT2 20T Standard</field>
+        <field name="sales_price">4551.75</field>
+        <field name="cost_price">1845.15</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_292" model="pml.product">
+        <field name="name">Op-Amp LM358 Standard</field>
+        <field name="sales_price">724.91</field>
+        <field name="cost_price">510.94</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_293" model="pml.product">
+        <field name="name">Push Button Switch Mini</field>
+        <field name="sales_price">4848.96</field>
+        <field name="cost_price">2066.58</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_294" model="pml.product">
+        <field name="name">Waterproof Junction Box Standard</field>
+        <field name="sales_price">3907.94</field>
+        <field name="cost_price">1925.67</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_295" model="pml.product">
+        <field name="name">Lead Screw 8mm 300mm Ultra</field>
+        <field name="sales_price">3117.56</field>
+        <field name="cost_price">1680.74</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_296" model="pml.product">
+        <field name="name">Analog Input Board 4CH v2</field>
+        <field name="sales_price">406.09</field>
+        <field name="cost_price">209.14</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_297" model="pml.product">
+        <field name="name">Tantalum Cap 10µF Advanced</field>
+        <field name="sales_price">3372.74</field>
+        <field name="cost_price">1979.02</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_298" model="pml.product">
+        <field name="name">Aluminium Extrusion 20x20 1M Plus</field>
+        <field name="sales_price">4769.97</field>
+        <field name="cost_price">2954.42</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_299" model="pml.product">
+        <field name="name">DIN Rail 35mm 1M Advanced</field>
+        <field name="sales_price">4436.87</field>
+        <field name="cost_price">2532.48</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+    <record id="pml_product_demo_300" model="pml.product">
+        <field name="name">DC Barrel Jack 5.5/2.1mm Lite</field>
+        <field name="sales_price">2706.83</field>
+        <field name="cost_price">1667.71</field>
+        <field name="version">1</field>
+        <field name="status">active</field>
+    </record>
+
+</odoo>

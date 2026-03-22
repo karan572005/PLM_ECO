@@ -56,6 +56,13 @@ class PmlEco(models.Model):
 
     # ─── Stage / Status ────────────────────────────────────────────────────────
 
+    priority = fields.Selection([
+        ('0', 'Low'),
+        ('1', 'Normal'),
+        ('2', 'High'),
+        ('3', 'Very High')
+    ], string="Priority", default='1')
+
     stage_id = fields.Many2one(
         'pml.eco.stage',
         string='Stage',
@@ -116,6 +123,14 @@ class PmlEco(models.Model):
         compute='_compute_approval_count',
     )
 
+    def action_check(self):
+        print("before ensure one", self)
+        self.ensure_one()
+        print("after ensure one", self)
+
+    def action_print_data(self):
+        print(self)
+
     # ─── Defaults ──────────────────────────────────────────────────────────────
 
     def _default_stage(self):
@@ -156,9 +171,15 @@ class PmlEco(models.Model):
     def _compute_approval_count(self):
         for rec in self:
             rec.approval_count = len(rec.approval_ids)
-            rec.pending_approval_count = len(
-                rec.approval_ids.filtered(lambda a: a.status == 'pending')
-            )
+            pending_approval_list = []
+
+            for abc in rec.approval_ids:
+                if abc.status == 'pending':
+                    pending_approval_list.append(1)
+
+            approval_count = len(pending_approval_list)
+            rec.pending_approval_count = approval_count
+
 
     @api.depends('status')
     def _compute_state_color(self):
@@ -173,7 +194,9 @@ class PmlEco(models.Model):
     # ─── Actions ───────────────────────────────────────────────────────────────
 
     def action_start(self):
+        print("before ensure one",self)
         self.ensure_one()
+        print("after ensure one",self)
         if not self.name:
             raise UserError('Title is required before starting.')
         if not self.eco_type:

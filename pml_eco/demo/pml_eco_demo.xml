@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ===== pml.eco DEMO DATA (4 records) ===== -->
+    <!-- Covers both ECO types: product & bill_of_material -->
+
+    <record id="pml_eco_demo_001" model="pml.eco">
+        <field name="name">Update Sales Price — Smart Temperature Controller</field>
+        <field name="eco_type">product</field>
+        <field name="pml_product_id" ref="pml_product_demo_300"/>
+        <!-- bill_of_material_id not required for product ECO -->
+        <field name="priority">2</field>
+        <field name="status">approved</field>
+        <field name="stage_id" ref="pml_eco_stage_in_progress"/>
+        <field name="version_update">False</field>
+        <field name="user_id" ref="base.user_admin"/>
+    </record>
+
+    <record id="pml_eco_demo_002" model="pml.eco">
+        <field name="name">Component Substitution — IoT Gateway Device BOM</field>
+        <field name="eco_type">bill_of_material</field>
+        <field name="pml_product_id" ref="pml_product_demo_295"/>
+        <field name="bill_of_material_id" ref="pml_bom_demo_115"/>
+        <field name="priority">3</field>
+        <field name="status">in_progress</field>
+        <field name="stage_id" ref="pml_eco_stage_in_progress"/>
+        <field name="version_update">True</field>
+        <field name="user_id" ref="base.user_admin"/>
+    </record>
+
+    <record id="pml_eco_demo_003" model="pml.eco">
+        <field name="name">New Revision — CNC Spindle Controller BoM v2</field>
+        <field name="eco_type">bill_of_material</field>
+        <field name="pml_product_id" ref="pml_product_demo_283"/>
+        <field name="bill_of_material_id" ref="pml_bom_demo_103"/>
+        <field name="priority">1</field>
+        <field name="status">draft</field>
+        <field name="stage_id" ref="pml_eco_stage_new"/>
+        <field name="version_update">True</field>
+        <field name="user_id" ref="base.user_admin"/>
+    </record>
+
+    <record id="pml_eco_demo_004" model="pml.eco">
+        <field name="name">Cost Reduction — Energy Monitor 3-Phase</field>
+        <field name="eco_type">product</field>
+        <field name="pml_product_id" ref="pml_product_demo_294"/>
+        <!-- bill_of_material_id not required for product ECO -->
+        <field name="priority">2</field>
+        <field name="status">done</field>
+        <field name="stage_id" ref="pml_eco_stage_done"/>
+        <field name="version_update">False</field>
+        <field name="user_id" ref="base.user_admin"/>
+    </record>
+
+</odoo>
